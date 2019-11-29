@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,8 +13,9 @@ public class BigDiv {
             A.add(a.charAt(i) - '0');
         }
         C= div(A,b);
-        for(int i = 0;i < C.size();i++)
+        for(int i = C.size()-2;i >= 0;i--)
             System.out.print(C.get(i));
+        System.out.print("\n"+C.get(C.size()-1));
     }
 
     private static List<Integer> div(List<Integer> a, int b) {
@@ -25,7 +27,9 @@ public class BigDiv {
             tmp = tmp%b;
 
         }
+        Collections.reverse(c);
         while (c.size()>1 && c.get(c.size()-1)==0) c.remove(c.size()-1);
+        c.add(tmp);
         return c;
     }
 }
