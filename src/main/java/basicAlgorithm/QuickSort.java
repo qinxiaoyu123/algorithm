@@ -1,18 +1,23 @@
+package basicAlgorithm;
+
 import java.util.Scanner;
 
-public class QuickSortK {
+public class QuickSort {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         int n = input.nextInt();
-        int k = input.nextInt();
         Integer arry []= new Integer[n];
         for(int i = 0 ; i < n ; i++){
             arry[i] = input.nextInt();
         }
         quickSort(arry, 0, n-1);
+        for(int i = 0; i<n ; i++){
+            if(i == n-1)
+                System.out.print(arry[i]+" ");
 
-         System.out.print(arry[k-1]);
-
+            else
+                System.out.print(arry[i]+" ");
+        }
 
 
     }
@@ -34,4 +39,5 @@ public class QuickSortK {
         quickSort(arry,l,j);
         quickSort(arry,j+1,r);
     }
+
 }

@@ -1,3 +1,5 @@
+package basicAlgorithm;
+
 import java.util.Scanner;
 
 public class NumberOneBinary {
