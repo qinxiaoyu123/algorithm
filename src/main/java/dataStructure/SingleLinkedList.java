@@ -22,9 +22,9 @@ public class SingleLinkedList {
             }
             else if (list[0].equals("empty")) {
                 if(tt>=0)
-                    System.out.println("No");
+                    System.out.println("NO");
                 else
-                    System.out.println("Yes");
+                    System.out.println("YES");
             }
             else if (list[0].equals("query")) {
                 System.out.println(stk[tt]);
