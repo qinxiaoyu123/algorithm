@@ -54,7 +54,7 @@ public class Heap {
         h[++size] = x;
         hp[size] = ++count;
         ph[count] = size;
-        up(count);
+        up(size);
 
     }
 
