@@ -1,13 +1,11 @@
 package graph;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-import dataStructure.Queue;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
+
 import java.util.LinkedList;
 
 
@@ -20,7 +18,7 @@ public class NodeLayer {
     static int[] ne = new int[2*N];
     static int n;
     static boolean[] flag = new boolean[2*N];
-    static HashMap<Integer, Integer> dis = new LinkedHashMap<Integer, Integer>();
+    static int[] dis = new int[N];
     static int idx;
     public static void main(String []args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -35,14 +33,14 @@ public class NodeLayer {
             e[idx] = b;
             ne[idx] = g[a];
             g[a] = idx;
-
-            idx++;
-            e[idx] = a;
-            ne[idx] = g[b];
-            g[b] = idx;
+//人家他妈是有向图！！！！
+//            idx++;
+//            e[idx] = a;
+//            ne[idx] = g[b];
+//            g[b] = idx;
         }
         que.offer(1);
-        dis.put(1,0);
+        dis[1]= 0;
         flag[1] = true;
         bfs();
     }
@@ -55,14 +53,13 @@ public class NodeLayer {
                 if(flag[value]) continue;
                 que.offer(value);
                 flag[value] = true;
-                dis.put(value,dis.get(tmp)+1);
-//                if(value == n) {
-//                    System.out.println(dis.get(value));
-//                    return;
-//                }
+                dis[value] = dis[tmp]+1;
+                if(value == n) {
+                    System.out.println(dis[value]);
+                    return;
+                }
             }
         }
-        if(flag[n]) System.out.println(dis.get(n));
-        else System.out.println(-1);
+        System.out.println(-1);
     }
 }
