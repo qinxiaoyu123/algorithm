@@ -36,7 +36,7 @@ public class Dijkstra2 {
     static int []dis = new int[N];
     static PriorityQueue<Node> que = new PriorityQueue<Node>(new Comparator<Node>() {
         public int compare(Node o1, Node o2) {
-            return o2.getDis() - o1.getDis();
+            return o1.getDis() - o2.getDis();
         }
     });
     static boolean[ ] st = new boolean[N];
@@ -47,7 +47,7 @@ public class Dijkstra2 {
         int m = Integer.parseInt(line[1]);
         while(m-->0){
             String []line1 = reader.readLine().split("\\s");
-            int a = Integer.parseInt(line1[0]), b = Integer.parseInt(line[1]), c = Integer.parseInt(line[2]);
+            int a = Integer.parseInt(line1[0]), b = Integer.parseInt(line1[1]), c = Integer.parseInt(line1[2]);
             add(a,b,c);
         }
         bfs();
