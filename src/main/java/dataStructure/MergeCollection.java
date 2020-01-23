@@ -27,6 +27,6 @@ public class MergeCollection {
 
     private static int find(int b) {
         if (p[b] != b) p[b] = find(p[b]);
-        return b;
+        return p[b];
     }
 }
