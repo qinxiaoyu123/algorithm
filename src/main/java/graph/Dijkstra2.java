@@ -28,6 +28,7 @@ class Node{
     }
 
 }
+
 public class Dijkstra2 {
     static  final int Max_length = 0x3f3f3f3f;
     static int n, idx;
