@@ -4,12 +4,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Backpack01 {
+public class Backpack011 {
     static int NN = 1010;
     static int V, N;
     static int[] v = new int[NN];
     static int[] w = new int[NN];
-    static int[][] value = new int[NN][NN];
+    static int[] value = new int[NN];
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -22,14 +22,10 @@ public class Backpack01 {
             w[i] = Integer.parseInt(list[1]);
         }
         for (int i = 1; i <= N; i++) {
-            for (int j = 0; j <= V; j++) {
-                int tmp = j - v[i];
-                if (tmp >= 0) {
-                    value[i][j] = Math.max(value[i - 1][j], (value[i - 1][tmp] + w[i]));
-                } else
-                    value[i][j] = value[i - 1][j];
+            for (int j = V; j >= v[i]; j--) {
+                value[j] = Math.max(value[j], (value[j-v[i]] + w[i]));
             }
         }
-        System.out.println(value[N][V]);
+        System.out.println(value[V]);
     }
 }
