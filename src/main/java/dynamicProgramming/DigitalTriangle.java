@@ -25,9 +25,9 @@ public class DigitalTriangle {
                 f[i][j] = INF;
             }
         }
-        f[1][1] = g[1][1];i
+        f[1][1] = g[1][1];
         for (int i = 2; i <= n; i++) {
-            for (int j = 1; j <= ; j++) {
+            for (int j = 1; j <= i; j++) {
                 if (1 <= j && j <= i) {
                     f[i][j] = Math.max(f[i - 1][j] + g[i][j], f[i][j]);
                 }
