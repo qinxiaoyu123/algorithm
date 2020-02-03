@@ -20,6 +20,6 @@ public class LongestCommonSubsequence {
                 if (a[i] == b[j]) f[i][j] = Math.max(f[i - 1][j - 1] + 1, f[i][j]);
             }
         }
-        System.out.println(f[n1][n2]);
+        System.out.println(n2-f[n1][n2]);
     }
 }
