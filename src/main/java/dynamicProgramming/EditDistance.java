@@ -1,8 +1,8 @@
 package dynamicProgramming;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+        import java.io.BufferedReader;
+        import java.io.IOException;
+        import java.io.InputStreamReader;
 
 public class EditDistance {
     static int N = 1000;
