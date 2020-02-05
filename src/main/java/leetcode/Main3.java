@@ -2,7 +2,7 @@ package leetcode;
 
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import org.w3c.dom.ls.LSOutput;
-
+//leetcode33题
 class Solution {
     public int search(int[] nums, int target) {
         int l = 0, r = nums.length-1;
