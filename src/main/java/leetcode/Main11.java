@@ -1,11 +1,7 @@
 package leetcode;
 //有序链表
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
- }
+
 
 class Solution11 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -19,7 +15,6 @@ class Solution11 {
             else{
                 ListNode result = null;
                 if((tmp1 != null && tmp2 != null && tmp1.val<=tmp2.val) ||(tmp2 ==null && tmp1 != null)) {
-
                     result = new ListNode(tmp1.val);
                     tmp1 = tmp1.next;
                 }
