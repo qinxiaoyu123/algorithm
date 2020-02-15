@@ -18,10 +18,10 @@ public class SortList {
 
     private void quickSortList(ListNode head, ListNode end) {
         if(head == null || end == null || head == end|| (head.next == end && head.val<= end.val)) {
-            // System.out.println("aaa "+head.val+" "+end.val);
+//             System.out.println("aaa "+head.val+" "+end.val);
             return;
         }
-        // System.out.println(head.val+" "+end.val);
+        System.out.println(head.val+" "+end.val);
         ListNode b = head;
         ListNode pre = head;
         int x = head.val;
@@ -33,7 +33,7 @@ public class SortList {
             else{
                 pre = b;
                 b = b.next;
-                // System.out.println("bp "+b.val+" "+p.val);
+                 System.out.println("bp "+b.val+" "+p.val);
                 if(b != p){
                     int tmp = p.val;
                     p.val = b.val;
@@ -65,6 +65,7 @@ public class SortList {
         ListNode iter = head;
         while(iter != null){
             System.out.print(iter.val+" ");
+            iter = iter.next;
         }
     }
 }
