@@ -1,7 +1,7 @@
 package dynamicProgramming;
 
 import java.util.Scanner;
-
+//背包解法
 public class IntegerDivision {
     static int N = 1010;
     static int[] f = new int[N];
