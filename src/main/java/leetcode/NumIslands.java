@@ -1,6 +1,7 @@
 package leetcode;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class NumIslands {
@@ -21,7 +22,6 @@ public class NumIslands {
     static int N;
     static int M;
     Queue<Node> queues = new LinkedList<>();
-
     public int numIslands(char[][] grid) {
         if (grid.length == 0) return 0;
         queues.clear();
