@@ -65,12 +65,9 @@ public class JobScheduling {
 //        for(int j = m;j>=endTime[0];j--){
 //            results[j] = profit[0];
 //        }
-//        for(int i = 1;i<n;i++){
-//            results[endTime[i]] = Math.max(results[endTime[i]], results[startTime[i]]+profit[i]);
-//            for(int j = endTime[i]; j<=m;j++){
-//                results[j] = results[endTime[i]];
-//            }
-//        }
+
+
+
 
 //        return results[m];
     }

@@ -29,7 +29,7 @@ public class MaxPathSum {
         //定义sum是因为路径不能重复，因此如果当前点要是想和上一级点连接，就只能取leftValue + root.val 或者rightValue + root.val或者root.val
         int sum = rightValue + root.val + leftValue;
         root.val = Math.max(Math.max(rightValue + root.val, root.val), leftValue + root.val);
-        result = Math.max(Math.max(result, root.val), sum);
+        result = Math.max(result,sum);
         return root.val;
     }
 
