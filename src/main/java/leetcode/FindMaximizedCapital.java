@@ -4,18 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class FindMaximizedCapital {
-    class Job {
-        int profits;
-        int captial;
-
-        public Job(int profits, int captial) {
-            this.profits = profits;
-            this.captial = captial;
-        }
-    }
-
     public int findMaximizedCapital(int k, int W, int[] Profits, int[] Capital) {
-        int result = 0;
+        int result = W;
         int n = Profits.length;
         while (k-- > 0) {
             int index = -1;
@@ -31,7 +21,7 @@ public class FindMaximizedCapital {
             if(index != -1){
                 Profits[index] = -1;
                 result = result+prof;
-                W = W-cap+prof;
+                W = W+prof;
             }
         }
         return result;
