@@ -12,16 +12,18 @@ public class HeapSort {
         for(int i = 0;i<n;i++){
             h[i+1] = a[i];
         }
-
+        System.out.println(Arrays.toString(h));
         size = n;
         for (int i = n / 2; i >= 1; i--) {
             down(i);
+            System.out.println(Arrays.toString(h));
         }
         int k = 3;
 
 
         while(k-->0){
             //不能从0开始
+            System.out.println(Arrays.toString(h));
             System.out.println(h[1]);
             h[1]=h[size--];
             down(1);
