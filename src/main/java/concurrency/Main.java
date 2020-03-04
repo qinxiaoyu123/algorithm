@@ -1,15 +1,18 @@
-package test;
+package concurrency;
 
 public class Main {
     public static void main(String[] args) {
         //lambda表达式
-        new Thread(()->{
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-        }).start();
+        };
         a();
     }
 
