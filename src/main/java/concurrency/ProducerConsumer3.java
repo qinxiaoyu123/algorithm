@@ -29,6 +29,7 @@ public class ProducerConsumer3 {
 
         @Override
         public void run() {
+            
             try {
                 emptySlot.acquire();
                 synchronized (ProducerConsumer3.class) {
