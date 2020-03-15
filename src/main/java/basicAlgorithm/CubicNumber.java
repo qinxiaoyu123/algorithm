@@ -20,6 +20,7 @@ public class CubicNumber {
 //                System.out.println(l);
             }
         }
+
         System.out.println(String.format("%.6f",l));
     }
 }
